@@ -1,16 +1,7 @@
-# interactive
+学んだこと
 
-A new Flutter project.
+main.dart で  thenme的な色をしていしてしまうと、 .onPrimaryContainerなどにより、色彩の強弱が楽になる
 
-## Getting Started
+状態変数はSwiftUIの @SAtateを思い出すと楽になる
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+モーダルボトムシートの学習
