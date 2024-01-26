@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
 
+  // 状態変数の受け取り
   final void Function() startQuiz;
 
   @override

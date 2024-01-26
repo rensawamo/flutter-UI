@@ -14,6 +14,8 @@ class Quiz extends StatefulWidget {
   }
 }
 
+
+ //状態管理の変数の状態などを保持
 class _QuizState extends State<Quiz> {
   List<String> _selectedAnswers = [];
   var _activeScreen = 'start-screen';
@@ -40,6 +42,10 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+
+
+
+  // build contextはUIのほう
   @override
   Widget build(context) {
     Widget screenWidget = StartScreen(_switchScreen);
