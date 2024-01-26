@@ -39,7 +39,7 @@ void main() {
         colorScheme: kColorScheme,
         appBarTheme: const AppBarTheme().copyWith(
           // swiftuiのtext の .captionと. tilte2的な違い
-          backgroundColor: kColorScheme.onPrimaryContainer,
+          backgroundColor: kColorScheme.inversePrimary,
           foregroundColor: kColorScheme.onPrimaryContainer,
         ),
         cardTheme: const CardTheme().copyWith(
