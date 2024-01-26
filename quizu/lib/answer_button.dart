@@ -4,7 +4,7 @@ class AnswerButton extends StatelessWidget {
   const AnswerButton({
     super.key,
     required this.answerText,
-    required this.onTap,
+    required this.  onTap,
   });
 
   final String answerText;

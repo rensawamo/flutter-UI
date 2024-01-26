@@ -8,12 +8,14 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswers,
-    required this.onRestart,
+    required this.onRestart, //呼び出し側の状態変数を更新
   });
 
   final void Function() onRestart;
   final List<String> chosenAnswers;
 
+  // getでリストを計算して返すchosenAnswers を加工している
+  // 呼び出されるときに受け取った
   List<Map<String, Object>> get summaryData {
     final List<Map<String, Object>> summary = [];
 
@@ -33,6 +35,8 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // @state にならない 加工された 定数的な値
     final numTotalQuestions = questions.length;
     final numCorrectQuestions = summaryData
         .where(
@@ -43,14 +47,17 @@ class ResultsScreen extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(40),
+        // 大枠のマージン
+        margin: const EdgeInsets.all(10),
+        color: Colors.blue,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // alignment
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
               style: GoogleFonts.lato(
-                color: const Color.fromARGB(255, 230, 200, 253),
+                color: const Color.fromARGB(0, 0, 10, 03),
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),

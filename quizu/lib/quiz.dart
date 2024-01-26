@@ -14,9 +14,9 @@ class Quiz extends StatefulWidget {
   }
 }
 
-
  //状態管理の変数の状態などを保持
 class _QuizState extends State<Quiz> {
+  // 呼び出すwidget  から ここに 回答されたものを蓄える
   List<String> _selectedAnswers = [];
   var _activeScreen = 'start-screen';
 
@@ -26,6 +26,7 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  // 呼び出しのwidgetでこの変数を使って 上記の状態変数リストに蓄える
   void _chooseAnswer(String answer) {
     _selectedAnswers.add(answer);
 
@@ -43,13 +44,13 @@ class _QuizState extends State<Quiz> {
   }
 
 
-
-
   // build contextはUIのほう
   @override
   Widget build(context) {
     Widget screenWidget = StartScreen(_switchScreen);
 
+
+    // 状態変数の _activeScreen によって viewをかえている
     if (_activeScreen == 'questions-screen') {
       screenWidget = QuestionsScreen(
         onSelectAnswer: _chooseAnswer,
@@ -70,7 +71,7 @@ class _QuizState extends State<Quiz> {
             gradient: LinearGradient(
               colors: [
                 Color.fromARGB(255, 78, 13, 151),
-                Color.fromARGB(255, 107, 15, 168),
+                Color.fromARGB(255, 107, 15, 138),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,

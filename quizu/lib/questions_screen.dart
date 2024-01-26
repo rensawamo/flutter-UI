@@ -10,6 +10,7 @@ class QuestionsScreen extends StatefulWidget {
     required this.onSelectAnswer,
   });
 
+  // 関数ごと要求 呼び出し側の 状態変数ごとかえる
   final void Function(String answer) onSelectAnswer;
 
   @override
@@ -22,6 +23,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
 
   void answerQuestion(String selectedAnswer) {
+    // widgetは呼び出し側のって意味で
+    // こちら特有の関数名に書き換える
     widget.onSelectAnswer(selectedAnswer);
     // currentQuestionIndex = currentQuestionIndex + 1;
     // currentQuestionIndex += 1;
@@ -30,6 +33,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     });
   }
 
+  // stateless
   @override
   Widget build(context) {
     final currentQuestion = questions[currentQuestionIndex];
@@ -37,7 +41,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(40),
+        margin: const EdgeInsets.all(40), // 紫
+        color: const Color.fromARGB(255, 255, 255, 0), // 黄色
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -45,7 +50,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             Text(
               currentQuestion.text,
               style: GoogleFonts.lato(
-                color: const Color.fromARGB(255, 201, 153, 251),
+                color: const Color.fromARGB(255, 255, 255, 222),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -56,7 +61,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               return AnswerButton(
                 answerText: answer,
                 onTap: () {
-                  answerQuestion(answer);
+                  answerQuestion(answer); // その widgetの状態変数を変える
                 },
               );
             })
