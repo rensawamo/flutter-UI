@@ -1,17 +1,20 @@
+import 'package:dotenv/dotenv.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/map.dart';
 import '../models/place.dart';
 
+
 class PlaceDetailScreen extends StatelessWidget {
   const PlaceDetailScreen({super.key, required this.place});
-
   final Place place;
 
   String get locationImage {
+    var env = DotEnv(includePlatformEnvironment: true)..load(['.env']);
+    var geoApi = env["GEO_API"];
     final lat = place.location.latitude;
     final lng = place.location.longitude;
-    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=AIzaSyDLcwxUggpPZo8lcbH0TB4Crq5SJjtj4ag';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=$geoApi';
   }
 
   @override

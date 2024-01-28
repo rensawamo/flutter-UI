@@ -42,3 +42,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+lib/consts.dart
+.env
+
+/android/secret.properties
+
+# iOS
+/ios/Runner/Environment.swift
