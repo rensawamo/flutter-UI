@@ -1,5 +1,5 @@
 import Foundation
 
 struct Env {
-  static let googleMapApiKey = "AIzaSyCB88FZ1f7G8EYzbJ_Ok9WXsvpM8wAKKn0"
+  static let googleMapApiKey = "AIzaSyC6TePlIbBR6L5vN_-3XYUkf78xGOqAj18"
 }
