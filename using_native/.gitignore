@@ -49,4 +49,4 @@ lib/consts.dart
 android/secret.properties
 
 # iOS
-#ios/Runner/Enviroment.swift
+ios/Runner/Enviroment.swift

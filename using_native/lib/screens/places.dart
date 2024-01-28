@@ -18,18 +18,18 @@ class _PlacesScreenState extends ConsumerState<PlacesScreen> {
   late Future<void> _placesFuture;
 
   @override
-  void initState() {
+  void initState() { // for feature
     super.initState();
     _placesFuture = ref.read(userPlacesProvider.notifier).loadPlaces();
   }
 
   @override
   Widget build(BuildContext context) {
-    final userPlaces = ref.watch(userPlacesProvider);
+    final userPlaces = ref.watch(userPlacesProvider); // 状態変数より一括取得
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your Places'),
+        title: const Text('場所一覧'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
@@ -46,9 +46,9 @@ class _PlacesScreenState extends ConsumerState<PlacesScreen> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: FutureBuilder(
-          future: _placesFuture,
+          future: _placesFuture, // init関数でデータ挿入
           builder: (context, snapshot) =>
-              snapshot.connectionState == ConnectionState.waiting
+              snapshot.connectionState == ConnectionState.waiting  // init関数に依存
                   ? const Center(child: CircularProgressIndicator())
                   : PlacesList(
                       places: userPlaces,

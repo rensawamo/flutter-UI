@@ -12,7 +12,7 @@ import GoogleMaps  // Add this import
 
     // TODO: Add your Google Maps API key
 
-    GMSServices.provideAPIKey("AIzaSyCiw1VUNLzjkb3843agZkdVJ9GxRq8PahA")
+    GMSServices.provideAPIKey(Env.googleMapApiKey)
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }

@@ -8,12 +8,13 @@ class PlacesList extends StatelessWidget {
 
   final List<Place> places;
 
+  // データを加工しないから いきなり buildをつくる
   @override
   Widget build(BuildContext context) {
     if (places.isEmpty) {
       return Center(
         child: Text(
-          'No places added yet',
+          '追加された場所はありません',
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: Theme.of(context).colorScheme.onBackground,
               ),
@@ -21,9 +22,12 @@ class PlacesList extends StatelessWidget {
       );
     }
 
+    // flutterでは listの方が予め決まっている
     return ListView.builder(
       itemCount: places.length,
+      // itemBuilderは Swift のfordachてきな感じか
       itemBuilder: (ctx, index) => ListTile(
+
         leading: CircleAvatar(
           radius: 26,
           backgroundImage: FileImage(places[index].image),
@@ -34,6 +38,7 @@ class PlacesList extends StatelessWidget {
                 color: Theme.of(context).colorScheme.onBackground,
               ),
         ),
+        // trailing: Icon(Icons.more_vert),
         subtitle: Text(
           places[index].location.address,
           style: Theme.of(context).textTheme.bodySmall!.copyWith(
@@ -47,6 +52,7 @@ class PlacesList extends StatelessWidget {
             ),
           );
         },
+
       ),
     );
   }
