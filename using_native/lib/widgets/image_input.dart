@@ -17,6 +17,8 @@ class ImageInput extends StatefulWidget {
 class _ImageInputState extends State<ImageInput> {
   File? _selectedImage;
 
+
+  //選択されている状態変数(写真)を更新する関数
   void _takePicture() async {
     final imagePicker = ImagePicker();
     final pickedImage =
@@ -25,19 +27,18 @@ class _ImageInputState extends State<ImageInput> {
     if (pickedImage == null) {
       return;
     }
-
     setState(() {
       _selectedImage = File(pickedImage.path);
     });
 
-    widget.onPickImage(_selectedImage!);
+    widget.onPickImage(_selectedImage!); // 呼び出し側の 状態変数の更新
   }
 
   @override
   Widget build(BuildContext context) {
     Widget content = TextButton.icon(
       icon: const Icon(Icons.camera),
-      label: const Text('Take Picture'),
+      label: const Text('写真'),
       onPressed: _takePicture,
     );
 
@@ -53,11 +54,12 @@ class _ImageInputState extends State<ImageInput> {
       );
     }
 
+    // 上で配置するものを指定して下でサイズ指定
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
           width: 1,
-          color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+          color: Theme.of(context).colorScheme.onPrimary.withOpacity(0.2),
         ),
       ),
       height: 250,

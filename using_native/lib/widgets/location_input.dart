@@ -39,6 +39,8 @@ class _LocationInputState extends State<LocationInput> {
     return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=$geoApi';
   }
 
+  // 元の widgetの current の locationを書き換える関数の実装
+
   Future<void> _savePlace(double latitude, double longitude) async {
     var env = DotEnv(includePlatformEnvironment: true)..load(['.env']);
     var geoApi = env["GEO_API"];
@@ -54,19 +56,19 @@ class _LocationInputState extends State<LocationInput> {
         longitude: longitude,
         address: address,
       );
-      _isGettingLocation = false;
+      _isGettingLocation = false;  // loadingのぐるぐる
     });
 
     widget.onSelectLocation(_pickedLocation!);
   }
 
   void _getCurrentLocation() async {
-    Location location = Location();
 
+    // camera permisionの定石
+    Location location = Location();
     bool serviceEnabled;
     PermissionStatus permissionGranted;
     LocationData locationData;
-
     serviceEnabled = await location.serviceEnabled();
     if (!serviceEnabled) {
       serviceEnabled = await location.requestService();
@@ -74,7 +76,6 @@ class _LocationInputState extends State<LocationInput> {
         return;
       }
     }
-
     permissionGranted = await location.hasPermission();
     if (permissionGranted == PermissionStatus.denied) {
       permissionGranted = await location.requestPermission();
@@ -115,13 +116,14 @@ class _LocationInputState extends State<LocationInput> {
   @override
   Widget build(BuildContext context) {
     Widget previewContent = Text(
-      'No location chosen',
+      '場所が選択されていません',
       textAlign: TextAlign.center,
       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
             color: Theme.of(context).colorScheme.onBackground,
           ),
     );
 
+    //すでに場所が選択されていた場合
     if (_pickedLocation != null) {
       previewContent = Image.network(
         locationImage,
@@ -154,12 +156,12 @@ class _LocationInputState extends State<LocationInput> {
           children: [
             TextButton.icon(
               icon: const Icon(Icons.location_on),
-              label: const Text('Get Current Location'),
+              label: const Text('現在地より検索'),
               onPressed: _getCurrentLocation,
             ),
             TextButton.icon(
               icon: const Icon(Icons.map),
-              label: const Text('Select on Map'),
+              label: const Text('マップより位置を検索'),
               onPressed: _selectOnMap,
             ),
           ],

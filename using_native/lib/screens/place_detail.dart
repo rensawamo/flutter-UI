@@ -31,7 +31,7 @@ class PlaceDetailScreen extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Positioned(
+          Positioned( // zstack的な  offset的な 位置指定が可能
             bottom: 0,
             left: 0,
             right: 0,
@@ -49,7 +49,7 @@ class PlaceDetailScreen extends StatelessWidget {
                     );
                   },
                   child: CircleAvatar(
-                    radius: 70,
+                    radius: 70, // 地図を画像として表示できる 非同期写真は  NetworkImageで表示
                     backgroundImage: NetworkImage(locationImage),
                   ),
                 ),

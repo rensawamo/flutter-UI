@@ -8,6 +8,7 @@ import 'package:sqflite/sqlite_api.dart';
 
 import '../models/place.dart';
 
+// Futureは 非同期を表す
 Future<Database> _getDatabase() async {
   final dbPath = await sql.getDatabasesPath();
   final db = await sql.openDatabase(
@@ -21,11 +22,14 @@ Future<Database> _getDatabase() async {
   return db;
 }
 
+// riverpodで状態管理
+// viewModel関数と考えていいよね
 class UserPlacesNotifier extends StateNotifier<List<Place>> {
   UserPlacesNotifier() : super(const []);
 
   Future<void> loadPlaces() async {
     final db = await _getDatabase();
+    // 'CREATE TABLE user_places table名の指定
     final data = await db.query('user_places');
     final places = data
         .map(
@@ -41,7 +45,6 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
           ),
         )
         .toList();
-
     state = places;
   }
 
@@ -62,7 +65,6 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
       'lng': newPlace.location.longitude,
       'address': newPlace.location.address,
     });
-
     state = [newPlace, ...state];
   }
 }

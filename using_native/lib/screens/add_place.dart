@@ -22,6 +22,7 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
   File? _selectedImage;
   PlaceLocation? _selectedLocation;
 
+  // 全入力で保存
   void _savePlace() {
     final enteredTitle = _titleController.text;
 
@@ -48,14 +49,14 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add new Place'),
+        title: const Text('新しい場所の追加'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
             TextField(
-              decoration: const InputDecoration(labelText: 'Title'),
+              decoration: const InputDecoration(labelText: '題目'),
               controller: _titleController,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onBackground,
@@ -77,7 +78,7 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
             ElevatedButton.icon(
               onPressed: _savePlace,
               icon: const Icon(Icons.add),
-              label: const Text('Add Place'),
+              label: const Text('保存'),
             ),
           ],
         ),
