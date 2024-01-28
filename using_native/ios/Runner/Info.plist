@@ -7,6 +7,7 @@
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Pick your favorite place image.</string>
 	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Take your favorite place image.</string>
 	<key>NSMicrophoneUsageDescription</key>
