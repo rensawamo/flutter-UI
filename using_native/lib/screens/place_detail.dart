@@ -49,7 +49,7 @@ class PlaceDetailScreen extends StatelessWidget {
                     );
                   },
                   child: CircleAvatar(
-                    radius: 70, // 地図を画像として表示できる 非同期写真は  NetworkImageで表示
+                    radius: 70, // 地図を画像として表示できる 非同期写真は  NetworkImageで表示。
                     backgroundImage: NetworkImage(locationImage),
                   ),
                 ),
