@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/release
 
 lib/consts.dart
-.env
+*.env
 
 /android/secret.properties
 
