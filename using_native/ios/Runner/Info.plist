@@ -12,7 +12,6 @@
 	<string>Take your favorite place image.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Take your favorite place image.</string>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Using Native</string>
 	<key>CFBundleExecutable</key>
