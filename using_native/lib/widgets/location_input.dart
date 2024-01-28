@@ -36,14 +36,14 @@ class _LocationInputState extends State<LocationInput> {
     var env = DotEnv(includePlatformEnvironment: true)..load(['.env']);
     var geoApi = env["GEO_API"];
 
-    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=$geoApi';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=AIzaSyCnYKEG6oQv92mh8hidCjnsIZZL9_mhIow';
   }
 
   Future<void> _savePlace(double latitude, double longitude) async {
     var env = DotEnv(includePlatformEnvironment: true)..load(['.env']);
     var geoApi = env["GEO_API"];
     final url = Uri.parse(
-        'https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=$geoApi');
+        'https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyCnYKEG6oQv92mh8hidCjnsIZZL9_mhIow');
     final response = await http.get(url);
     final resData = json.decode(response.body);
     final address = resData['results'][0]['formatted_address'];
