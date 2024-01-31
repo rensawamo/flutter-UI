@@ -12,4 +12,4 @@
 
 ・freeze 
 
-・@riverpod + .dファイル
+・@riverpod + .g  ファイル
