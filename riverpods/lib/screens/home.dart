@@ -7,16 +7,19 @@ class Home extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    print("Hey counter screen building...");
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("river アプリ"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("You have clicked the button this many times"),
+            const Text("riverpod での状態管理を行います"),
+
+            //Consumer Widgetの中に監視の変数を用意
+            // Widget? child は 監視している ref.watchの値が変わるたびに再描写される合図
+            // SwiftUI でいう @State varに依存する View
             Consumer(builder: (context, WidgetRef ref, Widget? child) {
               final counter = ref.watch(counterProvider);
               return Text(
