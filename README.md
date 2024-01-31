@@ -10,3 +10,6 @@
 
 ・google api 
 
+・freeze 
+
+・@riverpod + .dファイル
