@@ -4,6 +4,13 @@ import '../model/todo_model.dart';
 part 'todo_provider.g.dart';
 
 
+// Dartでは、オブジェクトの中身の中身の値の変更を監視するときに
+// freezeを使うことによってimmutable化する
+
+// 使い方
+// ① part 'todo_provider.g.dart'; などの partファイルを作成する
+
+
 @riverpod
 class Todos extends _$Todos {
   @override

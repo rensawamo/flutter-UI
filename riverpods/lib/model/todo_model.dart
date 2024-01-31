@@ -10,6 +10,7 @@ class TodoModel with _$TodoModel {
       required String description,
       required bool completed}) = _TodoModel;
 
+  // dynamicは動的片付け
   factory TodoModel.fromJson(Map<String, dynamic> json) =>
       _$TodoModelFromJson(json);
 }
