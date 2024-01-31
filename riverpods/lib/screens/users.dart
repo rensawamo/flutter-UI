@@ -16,7 +16,7 @@ class Users extends ConsumerWidget {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(4),
-        child: users.when(
+        child: users.when(   // future だから  ロード中とエラーと受け取りのときの分岐が可能
           data: (value) => ListView.builder(
             shrinkWrap: true,
             physics: const BouncingScrollPhysics(),
