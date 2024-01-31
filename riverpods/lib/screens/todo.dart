@@ -17,31 +17,31 @@ class Todo extends ConsumerWidget {
         title: const Text("Todos"),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
             TextFormField(
               controller: inputController,
               decoration: InputDecoration(
-                hintText: "Type your todo",
+                hintText: "やることリスト",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
               onFieldSubmitted: (value) => {
-                ref.read(todosProvider.notifier).addTodo(TodoModel(
+                ref.read(todosProvider.notifier).addTodo(TodoModel(  // notifirでstateの値を変える準備
                     id: Random().nextInt(9999),
                     description: value,
                     completed: false)),
                 showSnackBar(context),
-                inputController.text = "",
+                inputController.text = "", // こちらで入力されていた値をriverpodのviewModelに入れ込む
               },
             ),
             const SizedBox(height: 20),
 
             // * Display Todos
             Consumer(builder: (context, WidgetRef ref, child) {
-              final todos = ref.watch(todosProvider);
+              final todos = ref.watch(todosProvider); // これは変更を加えないstate のうけとり
               return ListView.builder(
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),

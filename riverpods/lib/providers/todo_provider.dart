@@ -8,13 +8,15 @@ part 'todo_provider.g.dart';
 // freezeを使うことによってimmutable化する
 
 // 使い方
-// ① part 'todo_provider.g.dart'; などの partファイルを作成する
+// ① model ファイルの  freezeの作成をおこなう
+// ② provider.dartの作成をおこなう
+// ③ provider.gg.dart の生成をおこなう
 
 
 @riverpod
 class Todos extends _$Todos {
   @override
-  List<TodoModel> build() {
+  List<TodoModel> build() { //from @freeze
     return [];
   }
 
