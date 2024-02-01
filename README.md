@@ -15,3 +15,17 @@
 ・@riverpod + .g  ファイル
 
 ・影デザイン
+
+・family で prpviderに paramをうけとる方法
+
+・scrollview
+
+・radio chekbox
+
+・tabber
+
+・ison
+
+・go_router
+
+・widget基礎 
