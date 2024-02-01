@@ -13,3 +13,5 @@
 ・freeze 
 
 ・@riverpod + .g  ファイル
+
+・影デザイン
