@@ -26,3 +26,4 @@
 
 ・go_router
 
+・di 依存関係
