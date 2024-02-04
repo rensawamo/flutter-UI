@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/navigation_go_router/build" />
+      <excludeFolder url="file://$MODULE_DIR$/navigation_go_router/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/navigation_go_router/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/radio_check/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/radio_check/build" />
+      <excludeFolder url="file://$MODULE_DIR$/radio_check/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/navigation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/navigation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/drawer/build" />
+      <excludeFolder url="file://$MODULE_DIR$/drawer/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/drawer/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ison_slider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ison_slider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ison_slider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/using_native/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/using_native/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/using_native/build" />
+      <excludeFolder url="file://$MODULE_DIR$/pageview/build" />
+      <excludeFolder url="file://$MODULE_DIR$/pageview/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/pageview/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/todo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/todo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/todo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/interactive/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/interactive/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/interactive/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tab_change/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tab_change/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tab_change/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dice/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dice/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dice/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/riverpods/build" />
+      <excludeFolder url="file://$MODULE_DIR$/riverpods/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/riverpods/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/list/build" />
+      <excludeFolder url="file://$MODULE_DIR$/list/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/list/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/family_provider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/family_provider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/family_provider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/quizu/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/quizu/build" />
+      <excludeFolder url="file://$MODULE_DIR$/quizu/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/basic_flutter_riverpods/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/basic_flutter_riverpods/build" />
+      <excludeFolder url="file://$MODULE_DIR$/basic_flutter_riverpods/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/freezeds/build" />
+      <excludeFolder url="file://$MODULE_DIR$/freezeds/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/freezeds/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
