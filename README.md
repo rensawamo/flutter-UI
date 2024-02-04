@@ -8,8 +8,6 @@
 
 ・cicd構築
 
-・google api 
-
 ・freeze 
 
 ・@riverpod + .g  ファイル
@@ -28,4 +26,3 @@
 
 ・go_router
 
-・widget基礎 
